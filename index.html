@@ -44,4 +44,43 @@
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
-            transition: backg
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover,
+        .audio-button:hover {
+            background-color: lightgreen;
+        }
+
+        audio {
+            display: none; /* Hides the audio controls */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MOSS BOSS</h1>
+    <div class="bio">
+        I’m Stacy, a God-fearing lady who has been blessed with the vision of Christ. Through this divine inspiration, I discovered the incredible power of sea moss and the numerous health benefits it offers. I am passionate about sharing this amazing drink with the world, exploring countless variations and creative techniques to make it both delicious and healthy. My mission is to inspire others to embrace the vitality that sea moss can bring into their lives. Join me on this journey to discover the wonders of sea moss!
+    </div>
+    
+    <a class="contact-button" href="https://wa.me/12687220306">Contact Me</a>
+
+    <!-- Audio Element -->
+    <audio id="audio" loop>
+        <source src="GOG.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playAudio" class="audio-button">Receive a Blessing</button>
+
+    <script>
+        // Add event listener to play audio when the button is clicked
+        document.getElementById('playAudio').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        });
+    </script>
+
+</body>
+</html>
